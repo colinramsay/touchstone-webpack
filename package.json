@@ -1,0 +1,24 @@
+{
+  "name": "touchstone-ex",
+  "version": "1.0.0",
+  "description": "Testing out touchstone.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Colin Ramsay",
+  "license": "ISC",
+  "dependencies": {
+    "css-loader": "^0.9.0",
+    "file-loader": "^0.8.1",
+    "react": "^0.12.2",
+    "style-loader": "^0.8.2",
+    "touchstonejs": "^0.1.2",
+    "webpack": "^1.4.15"
+  },
+  "devDependencies": {
+    "jsx-loader": "^0.12.2",
+    "less": "^2.2.0",
+    "less-loader": "^2.0.0"
+  }
+}
