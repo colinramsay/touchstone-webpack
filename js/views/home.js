@@ -5,23 +5,23 @@ var React = require('react'),
 
 var Home = React.createClass({
     mixins: [Navigation],
-    
+
     render: function() {
+
         return (
             <UI.FlexLayout className={this.props.viewClassName}>
-                <UI.Headerbar label="TouchstoneJS" />
+                <UI.Headerbar label="TouchstoneJS Webpack Example" />
                 <UI.FlexBlock scrollable>
-                    <div className="panel-header text-caps">Bars</div>
                     <div className="panel">
                         <Link component="div" to="about" viewTransition="show-from-right" className="list-item is-tappable">
-                            <div className="item-inner">about</div>
+                            <div className="item-inner">About</div>
                         </Link>
                     </div>
                 </UI.FlexBlock>
             </UI.FlexLayout>
         );
     }
-
 });
 
 module.exports = Home;
+

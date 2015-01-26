@@ -1,16 +1,15 @@
-var React = require('react/addons'),
-    ReactCSSTransitionGroup = React.addons.CSSTransitionGroup,
-    Touchstone = require('touchstonejs');
+var React = window.react = require('react/addons');
+var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
+var Touchstone = require('touchstonejs');
 
 require('../less/app.less');
 
 var views = {
     'home': require('./views/home'),
-    'about': require('./views/about')
+    'about': require('./views/about'),
 };
 
 var App = React.createClass({
-    
     mixins: [Touchstone.createApp(views)],
 
     getInitialState: function() {
@@ -24,13 +23,14 @@ var App = React.createClass({
     },
 
     render: function() {
-        return <div>
-            <ReactCSSTransitionGroup transitionName={this.state.viewTransition.name} transitionEnter={this.state.viewTransition.in} transitionLeave={this.state.viewTransition.out}>
+        return (
+            <div className="device-silhouette">
+                <ReactCSSTransitionGroup transitionName={this.state.viewTransition.name} transitionEnter={this.state.viewTransition.in} transitionLeave={this.state.viewTransition.out} className="view-wrapper" component="div">
                     {this.getCurrentView()}
-            </ReactCSSTransitionGroup>
-        </div>
+                </ReactCSSTransitionGroup>
+            </div>
+        );
     }
 });
-
 
 React.render(<App />, document.getElementById('app'));

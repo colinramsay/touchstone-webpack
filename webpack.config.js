@@ -1,11 +1,13 @@
 module.exports = {
     entry: './js/app.js',
     output: {
-        filename: './build/bundle.js'       
+        path: 'build',
+        filename: 'bundle.js',
+        publicPath: 'build/'
     },
     module: {
         loaders: [
-            { test: /\.js$/, loader: 'jsx-loader?harmony' } ,
+            { test: /\.js$/, loader: 'jsx-loader' } ,
             {
                 test: /\.less$/,
                 loader: "style-loader!css-loader!less-loader"
