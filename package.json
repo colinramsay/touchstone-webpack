@@ -4,7 +4,7 @@
   "description": "Testing out touchstone.io",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "./node_modules/webpack/bin/webpack.js --progress --watch & python -m SimpleHTTPServer"
   },
   "author": "Colin Ramsay",
   "license": "ISC",
